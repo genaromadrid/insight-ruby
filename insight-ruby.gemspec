@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'insight/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'insight'
+  spec.name          = 'insight_bitpay'
   spec.version       = Insight::VERSION
   spec.authors       = ['Genaro Madrid']
   spec.email         = ['genmadrid@gmail.com']
