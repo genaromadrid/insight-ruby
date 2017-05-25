@@ -2,8 +2,8 @@ require 'rest-client'
 require 'json'
 
 module Insight
-  autoload :API,        'Insight/api'
-  autoload :Connection, 'Insight/connection'
+  autoload :API,        'insight/api'
+  autoload :Connection, 'insight/connection'
 
   attr_writer :api
 
