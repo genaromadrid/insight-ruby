@@ -34,6 +34,10 @@ module Insight
       @connection.get("/tx/#{hash}")
     end
 
+    def rawtx(hash)
+      @connection.get("/rawtx/#{hash}")
+    end
+
     def push_transaction(hex)
       @connection.post('/tx/send', rawtx: hex)
     end
