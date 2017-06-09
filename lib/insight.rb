@@ -7,10 +7,10 @@ module Insight
 
   attr_writer :api
 
-  BLOCK_CHAIN = 'btc'
+  MAIN_CHAIN = 'btc'
 
   def self.api
-    @api ||= API.new(network:BLOCK_CHAIN)
+    @api ||= API.new(network: MAIN_CHAIN)
   end
 
   def self.method_missing(sym, *args, &block)

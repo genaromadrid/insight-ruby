@@ -3,18 +3,18 @@ module Insight
     attr_reader :network,
                 :api_version
 
-    def initialize(network:'btc')
-      @network = network
+    def initialize(network: 'btc', url: nil, api_version: nil)
+      @url = url
+      self.network = network
       @api_version = api_version
-      @connection = Connection.new(url)
     end
 
     def url
-      if network == 'btc'
-        'https://insight.bitpay.com/api'
-      else
-        'https://test-insight.bitpay.com/api'
-      end
+      @url ||= if network == 'btc'
+                 'https://insight.bitpay.com/api'
+               else
+                 'https://test-insight.bitpay.com/api'
+               end
     end
 
     def network=(network)
