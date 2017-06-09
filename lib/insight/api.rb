@@ -18,8 +18,8 @@ module Insight
     end
 
     def url=(other)
-      @url = url
-      @connection = Connection.new(url)
+      @url = other
+      @connection = Connection.new(other)
     end
 
     def network=(network)
