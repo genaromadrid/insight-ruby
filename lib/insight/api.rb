@@ -31,6 +31,14 @@ module Insight
       @connection.get("/block/#{hash}")
     end
 
+    def blocks(params)
+      @connection.get("/blocks#{'?' + params.to_param if params}")
+    end
+
+    def latest_block
+      blocks(limit: 1)[:blocks].first
+    end
+
     def block_raw(hash)
       @connection.get("/rawblock/#{hash}")
     end
