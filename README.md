@@ -9,7 +9,7 @@ Ruby SDK for insight.bitpay.com
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'insight'
+gem 'insight_bitpay'
 ```
 
 And then execute:
@@ -18,7 +18,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install insight
+    $ gem install insight_bitpay
 
 ## Usage
 
